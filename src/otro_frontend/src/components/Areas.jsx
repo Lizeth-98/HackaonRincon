@@ -69,19 +69,19 @@ const Areas = () => {
             }
             <div class="card">
               <div class="card-header">
-                Lista de áreas
+                Lista de alumnos
               </div>
               <div class="card-body">
                 <table class="table">
                   <thead>
                     <tr>
-                      <th>ID Sensado</th>
-                      <th>PH</th>
-                      <th>Humedad</th>
-                      <th>Nitrogeno</th>
-                      <th>Fosforo</th>
-                      <th>Potasio</th>
-                      <th colspan="2">Opciones</th>
+                      <th>ID</th>
+                      <th>Matrícula</th>
+                      <th>Matemáticas</th>
+                      <th>Español</th>
+                      <th>Química</th>
+                      <th>Inglés</th>
+             
                     </tr>
                   </thead>
                   <tbody id="tbody">
@@ -122,10 +122,7 @@ const Areas = () => {
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body" id="modalBody"></div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                  <button type="button" id="btnEliminarArea" class="btn btn-danger">Eliminar</button>
-                </div>
+             
               </div>
             </div>
           </div>

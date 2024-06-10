@@ -40,17 +40,17 @@ const Alumnos = () => {
                 }
                 <div class="card">
                     <div class="card-header">
-                        Registrar área
+                        Registrar alumno
                     </div>
                     <div class="card-body">
                         <form class="form" onSubmit={guardarArea}>
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre área</label>
-                                <input type="text" class="form-control" id="ph" placeholder="Ph" />
-                                <input type="text" class="form-control" id="humedad" placeholder="Humedad" />
-                                <input type="text" class="form-control" id="nitrogeno" placeholder="Nitrogeno" />
-                                <input type="text" class="form-control" id="fosforo" placeholder="Fosforo" />
-                                <input type="text" class="form-control" id="potasio" placeholder="Potasio" />
+                                <label for="nombre" class="form-label">Alumno</label>
+                                <input type="text" class="form-control" id="ph" placeholder="Matrícula" />
+                                <input type="text" class="form-control" id="humedad" placeholder="Matemáticas" />
+                                <input type="text" class="form-control" id="nitrogeno" placeholder="Español" />
+                                <input type="text" class="form-control" id="fosforo" placeholder="Química" />
+                                <input type="text" class="form-control" id="potasio" placeholder="Inglés" />
                             </div>
 
                             <input type="submit" class="btn btn-success" value="Agregar" />
