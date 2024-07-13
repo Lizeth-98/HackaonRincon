@@ -10,15 +10,12 @@ const Alumnos = () => {
     const guardarArea = async (e) => {
         e.preventDefault();
         var ph = parseFloat(e.target[0].value);
-        var humedad = parseFloat(e.target[1].value);
-        var nitrogeno = parseFloat(e.target[2].value);
-        var fosforo = parseFloat(e.target[3].value);
-        var potasio = parseFloat(e.target[4].value);
+        var turbidez = parseFloat(e.target[1].value);
 
         console.log();
         setLoading("Loading...");
 
-        await areaICP.crearArea(ph, humedad, nitrogeno, fosforo, potasio);
+        await areaICP.crearArea(ph, turbidez);
         setLoading("");
 
         {
@@ -46,11 +43,8 @@ const Alumnos = () => {
                         <form class="form" onSubmit={guardarArea}>
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Alumno</label>
-                                <input type="text" class="form-control" id="ph" placeholder="Matrícula" />
-                                <input type="text" class="form-control" id="humedad" placeholder="Matemáticas" />
-                                <input type="text" class="form-control" id="nitrogeno" placeholder="Español" />
-                                <input type="text" class="form-control" id="fosforo" placeholder="Química" />
-                                <input type="text" class="form-control" id="potasio" placeholder="Inglés" />
+                                <input type="text" class="form-control" id="ph" placeholder="Ph" />
+                                <input type="text" class="form-control" id="turbidez" placeholder="Turbidez" />
                             </div>
 
                             <input type="submit" class="btn btn-success" value="Agregar" />
