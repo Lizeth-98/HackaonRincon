@@ -9,10 +9,7 @@ import Float "mo:base/Float";
 actor Areas {
 	type Area = {
 		ph : Float;
-		humedad : Float;
-		nitrogeno : Float;
-		fosforo : Float;
-		potasio : Float;
+		turbidez : Float;
 	};
 
 	type areaID = Nat32;
@@ -25,13 +22,10 @@ actor Areas {
 		return areaID;
 	};
 
-	public shared (msg) func crearArea(ph : Float, humedad : Float, nitrogeno : Float, fosforo : Float, potasio : Float) : async () {
+	public shared (msg) func crearArea(ph : Float, turbidez : Float) : async () {
 		let area = {
 			ph = ph;
-			humedad = humedad;
-			nitrogeno = nitrogeno;
-			fosforo = fosforo;
-			potasio = potasio;
+			turbidez = turbidez;
 		};
 
 		listaAreas.put(Nat32.toText(generaAreaID()), area);
