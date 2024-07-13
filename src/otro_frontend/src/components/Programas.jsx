@@ -3,11 +3,11 @@
      return (
        <section className="mt-5 text-center">
          <h1>Recomendación</h1>
-         <h2>La calidad de la tierra es optima, de calidad 2. Para una mejor calidad agregue 100 gramos de materia organica.</h2>
+         <h2>El agua se encuentra en un estado optimo para su uso en el cultivo</h2>
         
        </section>
      )
    }
-  
+
   
    export default Programas
