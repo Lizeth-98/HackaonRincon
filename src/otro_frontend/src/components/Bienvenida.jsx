@@ -2,7 +2,7 @@ const Login = () => {
   
   return (
     <section className="mt-5 text-center">
-      <h1>Bienvenido al portal de registro de calificaciones</h1>
+      <h1>Bienvenido a BioAqua</h1>
       
       
     </section>
