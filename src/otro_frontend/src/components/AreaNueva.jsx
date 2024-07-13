@@ -37,12 +37,12 @@ const Alumnos = () => {
                 }
                 <div class="card">
                     <div class="card-header">
-                        Registrar alumno
+                        Registrar datos
                     </div>
                     <div class="card-body">
                         <form class="form" onSubmit={guardarArea}>
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Alumno</label>
+                                <label for="nombre" class="form-label">Datos</label>
                                 <input type="text" class="form-control" id="ph" placeholder="Ph" />
                                 <input type="text" class="form-control" id="turbidez" placeholder="Turbidez" />
                             </div>
