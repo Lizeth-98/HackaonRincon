@@ -69,19 +69,15 @@ const Areas = () => {
             }
             <div class="card">
               <div class="card-header">
-                Lista de alumnos
+                Lista de datos
               </div>
               <div class="card-body">
                 <table class="table">
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Matrícula</th>
-                      <th>Matemáticas</th>
-                      <th>Español</th>
-                      <th>Química</th>
-                      <th>Inglés</th>
-             
+                      <th>ph</th>
+                      <th>turbidez</th>             
                     </tr>
                   </thead>
                   <tbody id="tbody">
@@ -90,10 +86,7 @@ const Areas = () => {
                         <tr>
                           <td>{area[0]}</td>
                           <td>{area[1].ph}</td>
-                          <td>{area[1].humedad}</td>
-                          <td>{area[1].nitrogeno}</td>
-                          <td>{area[1].fosforo}</td>
-                          <td>{area[1].potasio}</td>
+                          <td>{area[1].turbidez}</td>
                           <td><button class="btn btn-primary btnEditarArea" data-id="{area[0]}">Editar</button></td>
                           <td>
                             <form onSubmit={eliminarArea} method="post">
