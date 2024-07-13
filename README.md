@@ -1,9 +1,19 @@
-# Future Tech
-Nuestro proyecto consistió en el desarrollo de un portal de calificaciones que ofrece una interfaz amigable con el usuario al tener un mensaje de bienvenida en la página principal así como una opción de inicio de sesión fácil de visualizar en la parte superior. Este utiliza un sistema de Internet Identity para garantizar la seguridad y privacidad de los usuarios. Al obtener el acceso contamos con un menú principal, el cual contiene opciones tales como ingresar los datos del alumno, como su matrícula y calificaciones, datos que al procesarse se envían con una petición al backend, del sistema para que procese la información y la devuelva en forma de lista, estos datos al igual que el código son almacenados en canisters, los cuales facilitan el empaquetar el código y dependencias en un solo paquete que puede ser distribuido y ejecutado de manera consistente en diferentes plataformas y entornos. permitiendo así una gestión eficiente de los registros académicos.
+# BioAqua
+
+Nuestro proyecta se basa en un sistema de sensores que monitorea el estado del agua, la turbidez, así como el ph, son parámetros que medimos, proporcionando así el registro de datos que permiten ajustes precisos al estado del agua. Esto no solo mejora la eficiencia en el uso del agua tratada, sino que también reduce la contaminación y el consumo de agua, dichos valores se ven reflejados en nuestra página web. Haciendo uso de inteligencias artificiales para el análisis y determinación de acciones a realizar para la purificación.
+
+## Problematica
+Aguascalientes tiene el cuarto lugar en estrés hídrico, existe escasez de lluvias, así como la generación de aguas residuales que no pueden ser usadas para el riego de cultivos, esto siendo una problemática debido a que entre el 70 Y 80% del agua que se consume en Aguascalientes pertenece al sector agrícola.
+
+### Implementacion del ICP 
+
+Para el proyecto BioAqua se hará uso de las tecnologías de Internet Computer Protocol (ICP), por su descentralización y open source que va a permitir que cualquier usuario tenga acceso a esto, con una transparencia con el usuario, en especial se usaran:
+- [Canisters para el almacenamiento de datos.]
+- [Internet identity para la autenticación del usuario.]
 
 
 
-Welcome to your new otro project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+Welcome to your new project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
 
@@ -13,54 +23,51 @@ To learn more before you start working with otro, see the following documentatio
 - [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
 - [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
 - [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
-
-If you want to start working on your project right away, you might want to try the following commands:
-
+  
+Si desea comenzar a trabajar en su proyecto de inmediato, puede probar los siguientes comandos:
 ```bash
-git clone https://github.com/AngelOsmany/certificacion.git
-nvm install 20
-nvm use 20
+git clone https://github.com/Lizeth-98/HackatonRincon.git
+cd HackatonRincon
 npm install
-cd proyecto/
+nvm install 20
+nvm use 20 
 dfx help
 dfx canister --help
 ```
 
-## Running the project locally
+#### Correr el proyecto de forma local
 
-If you want to test your project locally, you can use the following commands:
+Si desea probar su proyecto localmente, puede utilizar los siguientes comandos:
 
 ```bash
 # Starts the replica, running in the background
 dfx start --background
 
-# Deploys your canisters to the replica and generates your candid interface
+# # Implementa tus contenedores en la réplica y genera tu candid interface
 dfx deploy
 ```
 
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
+Una vez que se complete el trabajo, su solicitud estará disponible en `http://localhost:4943?canisterId={asset_canister_id}`.
 
-If you have made changes to your backend canister, you can generate a new candid interface with
+Si ha realizado cambios en su canister backend, puede generar una nueva interfaz candid con
 
 ```bash
 npm run generate
 ```
 
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
+en cualquier momento. Esto se recomienda antes de iniciar el servidor de desarrollo frontend y se ejecutará automáticamente cada vez que ejecute`dfx deploy`.
 
-If you are making frontend changes, you can start a development server with
+Si está realizando cambios en la interfaz, puede iniciar un servidor de desarrollo con
 
 ```bash
 npm start
 ```
 
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
+Que iniciará un servidor en `http://localhost:8080`, enviar solicitudes de API a la réplica en el puerto 4943.
+###### Nota sobre las variables de entorno frontend
+Si aloja código de interfaz en algún lugar sin utilizar DFX, es posible que deba realizar uno de los siguientes ajustes para garantizar que su proyecto no obtenga la root key en producción:
 
-### Note on frontend environment variables
-
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
-
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
+-coloca `DFX_NETWORK` to `ic` si tu estás usando Webpack
+- utilice su propio método preferido para reemplazar `process.env.DFX_NETWORK` in the autogenerated declarations
+- Configure `canisters -> {asset_canister_id} -> declarations -> env_override to a string` en `dfx.json` reemplazará `process.env.DFX_NETWORK` con la cadena en las declaraciones autogeneradas
+-Escribe tu propio `createActor` constructor
